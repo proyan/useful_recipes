@@ -72,7 +72,9 @@ class UserPermittedRun:
                 self._pause = False
                 self._continue.set()
             else:
-                raw_input("Press Enter to Pause:")
+                raw_input("Press Enter to Pause or Finish:")
                 self._pause = True
                 self._continue.clear()
-        return ret
+
+        print "Exiting from main thread"
+        return True
