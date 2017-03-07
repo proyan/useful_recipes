@@ -66,7 +66,7 @@ class UserPermittedRun:
     def run(self):
         self._thread1 = threading.Thread(target=self._base_fn, args = self._args)
         self._thread1.start()
-        while True and self._thread1.is_alive():
+        while self._thread1.is_alive():
             if self._pause == True:
                 raw_input("Press Enter to Resume:")
                 self._pause = False
